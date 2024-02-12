@@ -57,7 +57,7 @@ export default function Component() {
 
             <Drawer>
               <DrawerTrigger asChild>
-                <Button className="w-full" size="sm" variant="outline">
+                <Button className="w-full" variant="outline">
                   Bagikan
                 </Button>
               </DrawerTrigger>
@@ -69,7 +69,7 @@ export default function Component() {
                   </DrawerDescription>
                 </DrawerHeader>
 
-                <div className="flex gap-2 p-4">
+                <div className="flex justify-center gap-2 p-4">
                   <Link
                     href="whatsapp://send?text=🎥 Tonton film DIRTY VOTE, full, tanpa iklan - https://dirty-vote.vercel.app/ 🍿"
                     data-action="share/whatsapp/share"
@@ -81,8 +81,11 @@ export default function Component() {
                     href="https://twitter.com/intent/tweet?text=🎥 Tonton film DIRTY VOTE, full, tanpa iklan - https://dirty-vote.vercel.app/ 🍿"
                     target="_blank"
                   >
-                    <Button variant="default">Twitter/X</Button>
+                    <Button variant="default">Twitter / X</Button>
                   </Link>
+                </div>
+                <div className="flex justify-center items-center gap-2 p-4 text-sm bg-slate-200">
+                  Salin manual: <div className="p-1 rounded-md bg-slate-100 border-t border-gray-100">https://dirty-vote.vercel.app/</div>
                 </div>
                 <DrawerFooter>
                   <DrawerClose>
@@ -97,14 +100,14 @@ export default function Component() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="w-full" size="sm" variant="outline">
+              <Button className="w-full" variant="outline">
                 Tonton di YouTube
               </Button>
             </a>
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center gap-4 p-4 py-10 md:gap-8 md:p-10">
+      <div className="flex flex-col items-center gap-4 p-4 py-10 pb-20 md:gap-8 md:p-10">
         <div className="flex flex-col gap-2 max-w-5xl text-center text-sm text-gray-500 dark:text-gray-400">
           <p>
             Gue concern dengan eksistensi film Dirty Vote. Ada beberapa laporan
@@ -113,8 +116,8 @@ export default function Component() {
             ini ditujukan untuk mempermudah sharing dan menonton.
           </p>
           <p>
-            Silakan gunakan satu link ini untuk semua platform. Bagikan ke
-            WhatsApp, Telegram, Discord atau <b>platform apapun</b>. Tanpa
+            <b>Silakan gunakan satu link ini untuk semua platform.</b> Bagikan
+            ke WhatsApp, Telegram, Discord atau <b>platform apapun</b>. Tanpa
             iklan, tanpa gangguan. Aplikasi ini meng-embed video asli dari
             YouTube. Jumlah views dari aplikasi ini akan terhitung di laman
             YouTube.
@@ -124,7 +127,7 @@ export default function Component() {
             Amit-amit film ini hilang dari YouTube, gue bisa dengan gampang
             ganti sumber url video film Dirty Vote di halaman aplikasi ini.
             <br />
-            <b>Link yg kalian bagikan nggak akan mati. ✊</b>
+            <b>Link yang kalian bagikan nggak akan mati. ✊</b>
           </p>
           <p>
             Ini juga salah satu alasan gue bikin halaman dedicated ini. Biar
