@@ -8,6 +8,21 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "DIRTY VOTE",
   description: "Tonton film Dirty Vote - Full - Tanpa iklan",
+  openGraph: {
+    title: 'DIRTY VOTE',
+    description: 'Tonton film Dirty Vote - Full - Tanpa iklan',
+    url: 'https://dirty-vote.vercel.app',
+    siteName: 'DIRTY VOTE',
+    images: [
+      {
+        url: 'https://dirty-vote.vercel.app/maxresdefault.jpg', // Must be an absolute URL
+        width: 1280,
+        height: 720,
+      },
+    ],
+    locale: 'id_ID',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

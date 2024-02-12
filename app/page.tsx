@@ -111,12 +111,12 @@ export default function Component() {
         <nav className="ml-auto space-x-4 md:space-x-6">
           <Link
             className="font-medium text-sm tracking-wide"
-            href="https://twitter.com/intent/tweet?text=Hai @vngnc, saya menemukan masalah pada dirty-vote.vercel.app: ..."
+            href="https://twitter.com/intent/tweet?text=Hai @vngnc, saya menemukan masalah pada https://dirty-vote.vercel.app: ..."
             target="_blank"
           >
             Laporkan masalah
           </Link>
-          <Link className="font-medium text-sm tracking-wide" href="#">
+          <Link className="font-medium text-sm tracking-wide" href="https://github.com/vngnc3/dirty-vote" target="_blank">
             Github
           </Link>
         </nav>
