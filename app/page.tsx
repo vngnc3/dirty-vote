@@ -5,6 +5,16 @@
  */
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 
 export default function Component() {
   return (
@@ -45,19 +55,65 @@ export default function Component() {
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 Diunggah 11 Februari 2024
               </p>
-              <Button size="sm" variant="outline">
-                Bagikan
-              </Button>
-              <Button size="sm" variant="outline">
-                Tonton di YouTube
-              </Button>
+              <p>&nbsp;</p>
+
+              <Drawer>
+                <DrawerTrigger asChild>
+                  <Button className="w-full" size="sm" variant="outline">
+                    Bagikan
+                  </Button>
+                </DrawerTrigger>
+                <DrawerContent>
+                  <DrawerHeader>
+                    <DrawerTitle>Bagikan halaman ini</DrawerTitle>
+                    <DrawerDescription>
+                      Twitter/X, WhatsApp, atau salin link
+                    </DrawerDescription>
+                  </DrawerHeader>
+
+                  <div className="flex gap-2 p-4">
+                    <Link
+                      href="whatsapp://send?text=🎥 Tonton film DIRTY VOTE, full, tanpa iklan - https://dirty-vote.vercel.app/ 🍿"
+                      data-action="share/whatsapp/share"
+                    >
+                      <Button variant="default">WhatsApp</Button>
+                    </Link>
+                    <Link
+                      className="font-medium text-sm tracking-wide"
+                      href="https://twitter.com/intent/tweet?text=🎥 Tonton film DIRTY VOTE, full, tanpa iklan - https://dirty-vote.vercel.app/ 🍿"
+                      target="_blank"
+                    >
+                      <Button variant="default">Twitter/X</Button>
+                    </Link>
+                  </div>
+                  <DrawerFooter>
+                    <DrawerClose>
+                      <Button variant="outline">Kembali</Button>
+                    </DrawerClose>
+                  </DrawerFooter>
+                </DrawerContent>
+              </Drawer>
+
+              <a
+                href="https://www.youtube.com/watch?v=RRgLZ66NCmE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full" size="sm" variant="outline">
+                  Tonton di YouTube
+                </Button>
+              </a>
             </div>
           </div>
         </div>
       </main>
       <header className="flex items-center h-14 px-4 border-t border-gray-100 sm:h-16 md:px-6">
         <nav className="ml-auto space-x-4 md:space-x-6">
-          <Link className="font-medium text-sm tracking-wide" href="https://twitter.com/intent/tweet?text=Hai @vngnc, saya menemukan masalah pada dirty-vote.vercel.app: ..." target="_blank">
+          <Link
+            className="font-medium text-sm tracking-wide"
+            href="https://twitter.com/intent/tweet?text=Hai @vngnc, saya menemukan masalah pada dirty-vote.vercel.app: ..."
+            target="_blank"
+          >
             Laporkan masalah
           </Link>
           <Link className="font-medium text-sm tracking-wide" href="#">
