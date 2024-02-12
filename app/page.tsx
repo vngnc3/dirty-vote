@@ -10,11 +10,12 @@ export default function Component() {
   return (
     <div className="flex flex-col h-screen">
       <main className="flex-1 overflow-y-auto">
-        <div className="flex flex-col gap-4 p-4 md:gap-8 md:p-10 bg-red-400">
-          <div className="grid gap-4 md:grid-cols-[1fr_800px]">
-            {/* Main wrapper for video embed + description + share button */}
-            <div className="flex items-center justify-center rounded-lg border border-gray-200 bg-white shadow-sm min-w-[380px] max-w-[640px] w-full md:w-auto aspect-video dark:border-gray-800 dark:bg-gray-950">
-              <iframe
+        <div className="flex flex-col gap-4 p-4 md:gap-8 md:p-10">
+          {/* Main wrapper for video embed + description + share button */}
+          <div className="grid gap-4 md:flex md:justify-center">
+            {/* iframe wrapper: */}
+            <div className="flex items-center justify-center rounded-lg border border-gray-200 bg-white shadow-sm md:min-w-[400px]  w-full md:w-auto aspect-video dark:border-gray-800 dark:bg-gray-950">
+              <iframe // YouTube iframe embed
                 className="w-full h-full object-cover rounded-md bg-muted"
                 width="560"
                 height="315"
@@ -25,7 +26,8 @@ export default function Component() {
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="grid gap-2 max-w-screen-md">
+            {/* Description and buttons column */}
+            <div className="flex flex-col gap-2 max-w-screen-sm">
               <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl">
                 DIRTY VOTE - Full Movie (OFFICIAL)
               </h1>
@@ -55,17 +57,11 @@ export default function Component() {
       </main>
       <header className="flex items-center h-14 px-4 border-t border-gray-100 sm:h-16 md:px-6">
         <nav className="ml-auto space-x-4 md:space-x-6">
-          <Link className="font-medium text-sm tracking-wide" href="#">
-            Dashboard
+          <Link className="font-medium text-sm tracking-wide" href="https://twitter.com/intent/tweet?text=Hai @vngnc, saya menemukan masalah pada dirty-vote.vercel.app: ..." target="_blank">
+            Laporkan masalah
           </Link>
           <Link className="font-medium text-sm tracking-wide" href="#">
-            Team
-          </Link>
-          <Link className="font-medium text-sm tracking-wide" href="#">
-            Projects
-          </Link>
-          <Link className="font-medium text-sm tracking-wide" href="#">
-            Calendar
+            Github
           </Link>
         </nav>
       </header>

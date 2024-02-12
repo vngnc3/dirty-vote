@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dirty Vote",
-  description: "Tonton film Dirty Vote",
+  title: "DIRTY VOTE",
+  description: "Tonton film Dirty Vote - Full - Tanpa iklan",
 };
 
 export default function RootLayout({
